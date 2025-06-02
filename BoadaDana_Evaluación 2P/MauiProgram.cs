@@ -1,25 +1,22 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Android.Content.Res;
 
 namespace BoadaDana_Evaluación_2P
 {
-    public static class MauiProgram
+    public partial class MainPage : ContentPage
     {
-        public static MauiApp CreateMauiApp()
+        public MainPage()
         {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+            InitializeComponent();
+        }
 
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
+        private async void OnJokesButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new JokesPage());
+        }
 
-            return builder.Build();
+        private async void OnAboutButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AboutPage());
         }
     }
 }
