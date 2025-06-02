@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BoadaDana_Evaluación_2P.PaginaChistes"
+             Title="PaginaChistes">
+    <AbsoluteLayout>
+        
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,0.85" 
+                 AbsoluteLayout.LayoutFlags="All"
+                 Padding="20">
+
+            <StackLayout VerticalOptions="Center" 
+                      HorizontalOptions="Center"
+                      Spacing="20">
+
+                <Label Text=" Chiste del Día "
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    TextColor="#512BD4"
+                    Margin="0,0,0,20"/>
+
+                
+                <Frame BackgroundColor="White"
+                    BorderColor="#E0E0E0"
+                    CornerRadius="15"
+                    HasShadow="True"
+                    Padding="20"
+                    MinimumHeightRequest="200">
+
+                    <Label x:Name="JokeLabel"
+                        Text="Presiona el botón para ver un chiste"
+                        FontSize="18"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        LineBreakMode="WordWrap"
+                        TextColor="#333333"/>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
+        
+        <Frame AbsoluteLayout.LayoutBounds="0.5,0.95,0.8,60"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent"
+            HasShadow="True"
+            Padding="0">
+
+            <Button x:Name="RefreshButton"
+                 Text=" Otro chiste"
+                 Clicked="OnRefreshJokeClicked"
+                 BackgroundColor="#512BD4"
+                 TextColor="White"
+                 CornerRadius="15"
+                 FontSize="16"
+                 FontAttributes="Bold"/>
+        </Frame>
+    </AbsoluteLayout>
+</ContentPage>
