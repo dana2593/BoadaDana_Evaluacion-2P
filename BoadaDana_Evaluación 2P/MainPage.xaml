@@ -3,46 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BoadaDana_Evaluación_2P.MainPage"
              Title="Dana Boada - Examen">
+    <StackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+        <Label Text="Dana Boada" 
+           FontSize="32" 
+           HorizontalOptions="Center"
+           FontAttributes="Bold"
+           Margin="0,0,0,20"/>
 
-    <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Center">
+        <Image Source="estrella.png"
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Aspect="AspectFill"/>
 
-        <Label 
-            Text="Dana Boada"
-            SemanticProperties.HeadingLevel="Level1"
-            FontSize="32"
-            FontAttributes="Bold"
-            HorizontalOptions="Center" 
-            TextColor="#2E3440" />
-
-        <Image
-            Source="dana_profile.png"
-            SemanticProperties.Description="Imagen de perfil de Dana"
-            HeightRequest="200"
-            WidthRequest="200"
-            Aspect="AspectFill"
-            HorizontalOptions="Center" />
-
-        <Button
-            x:Name="JokesButton"
-            Text="Ver Chistes"
-            BackgroundColor="#5E81AC"
-            TextColor="White"
-            FontSize="18"
-            CornerRadius="10"
+        <Button Text="Ver Chistes"
             Clicked="OnJokesButtonClicked"
-            HorizontalOptions="Center"
-            WidthRequest="200" />
-
-        <Button
-            x:Name="AboutButton"
-            Text="Acerca de"
-            BackgroundColor="#81A1C1"
+            BackgroundColor="#512BD4"
             TextColor="White"
-            FontSize="18"
             CornerRadius="10"
-            Clicked="OnAboutButtonClicked"
-            HorizontalOptions="Center"
-            WidthRequest="200" />
+            Margin="0,20,0,0"/>
 
-    </VerticalStackLayout>
+        <Button Text="Acerca de"
+            Clicked="OnAboutButtonClicked"
+            BackgroundColor="#512BD4"
+            TextColor="White"
+            CornerRadius="10"
+            Margin="0,10,0,0"/>
+    </StackLayout>
 </ContentPage>
